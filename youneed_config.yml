@@ -1,6 +1,6 @@
-# youneed_config.yml — built 2026-10-25 from youneed.win 2026-10-24 post
-# (ss/vmess/vless/trojan/hysteria2 nodes); same structure as mihomo_new_config.yml
-# (ports/sniffer/DNS incl. Quad9 + OpenDNS DoH/groups/rules); proxies replaced
+# youneed_config.yml — built 2026-10-25 from youneed.win 2026-10-24 post,
+# merged 2026-10-25 with the 2026-10-25 post (old nodes kept, new nodes added);
+# same structure as mihomo_new_config.yml (ports/sniffer/DNS incl. Quad9 + OpenDNS DoH/groups/rules)
 port: 7890
 socks-port: 7891
 allow-lan: false
@@ -265,6 +265,13 @@ proxy-groups:
   - youneed hysteria2 hy2.aspidnet.xyz:443
   - youneed hysteria2 nl-hy-test.tcp-reset-club.net:443
   - youneed hysteria2 152.67.75.161:443
+  - youneed ss 202.50.253.54:19999
+  - youneed ss 191.223.221.53:8388
+  - youneed vless hk1.frnhk.xyz:443
+  - youneed vless 77.110.97.245:443
+  - youneed vless xsru1.ddnsfree.com:443
+  - 'youneed vless nexusmods.com:443 #2'
+  - 'youneed vless youxuan.cf.090227.xyz:443 #2'
 rules:
 - MATCH,Global ©️
 sniffer:
@@ -2019,3 +2026,78 @@ proxies:
   skip-cert-verify: true
   obfs: salamander
   obfs-password: c13f29db6a638ad2b211b9ce2669ef27
+- name: youneed ss 202.50.253.54:19999
+  type: ss
+  server: 202.50.253.54
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: youneed ss 191.223.221.53:8388
+  type: ss
+  server: 191.223.221.53
+  port: 8388
+  cipher: aes-256-gcm
+  password: JuD6MNgtX3nVpCzFzXYVYjDTZ7nsmaTv
+- name: youneed vless hk1.frnhk.xyz:443
+  type: vless
+  server: hk1.frnhk.xyz
+  port: 443
+  uuid: 6006c9a2-c0a2-4cda-80f2-405b0d790fc8
+  encryption: none
+  tls: true
+  flow: xtls-rprx-vision
+  servername: www.uni-frankfurt.de
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: gXOQOlynAB6Znbp902LRyX7eYSxTWrj7D2nRCB1gNmE
+    short-id: 6b7a8c9d
+- name: youneed vless 77.110.97.245:443
+  type: vless
+  server: 77.110.97.245
+  port: 443
+  uuid: d342d11e-d224-4463-b982-532309285094
+  encryption: none
+  tls: true
+  servername: ccc.010304.xyz
+  network: ws
+  ws-opts:
+    path: /fp=chromefp=chrome
+    headers:
+      Host: ccc.010304.xyz
+- name: youneed vless xsru1.ddnsfree.com:443
+  type: vless
+  server: xsru1.ddnsfree.com
+  port: 443
+  uuid: c90395e6-2140-47ad-a54d-9b166729d3ef
+  encryption: none
+  tls: true
+  servername: xsru1.ddnsfree.com
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc-ru
+- name: 'youneed vless nexusmods.com:443 #2'
+  type: vless
+  server: nexusmods.com
+  port: 443
+  uuid: 44d636ef-7056-4bdf-a3f4-acabe2adfc6f
+  encryption: none
+  tls: true
+  servername: 1ayz.egs.hhll.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /?auto=1&ed=2560
+    headers:
+      Host: 1ayz.egs.hhll.vavava.kdns.fr
+- name: 'youneed vless youxuan.cf.090227.xyz:443 #2'
+  type: vless
+  server: youxuan.cf.090227.xyz
+  port: 443
+  uuid: 44d636ef-7056-4bdf-a3f4-acabe2adfc6f
+  encryption: none
+  tls: true
+  servername: 1ayz.egs.hhll.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /?auto=1&ed=2560
+    headers:
+      Host: 1ayz.egs.hhll.vavava.kdns.fr

@@ -1,5 +1,7 @@
 # youneed_config.yml — built 2026-10-25 from youneed.win 2026-10-24 post,
-# merged 2026-10-25 with the 2026-10-25 post (old nodes kept, new nodes added);
+# merged 2026-10-25 with the 2026-10-25 post, merged 2026-10-26 with the 2026-10-26 post
+# (old nodes kept, new nodes added; GeoIP flags added 2026-10-26 via ip-api —
+# Cloudflare-fronted servers left unflagged in 🌍 Others, never guessed);
 # same structure as mihomo_new_config.yml (ports/sniffer/DNS incl. Quad9 + OpenDNS DoH/groups/rules)
 port: 7890
 socks-port: 7891
@@ -43,6 +45,40 @@ proxy-groups:
   - Global - Fallback(Tiers) 🌎
   - Global - LoadBalance(ch) 🦄
   - Global - LoadBalance(rr) 🍄
+  - 🇺🇸 US
+  - 🇳🇱 NL
+  - 🇹🇼 TW
+  - 🇮🇹 IT
+  - 🇭🇰 HK
+  - 🇨🇦 CA
+  - 🇩🇪 DE
+  - 🇬🇧 GB
+  - 🇯🇵 JP
+  - 🇸🇬 SG
+  - 🇮🇳 IN
+  - 🇫🇷 FR
+  - 🇲🇪 ME
+  - 🇦🇪 AE
+  - 🇧🇾 BY
+  - 🇨🇭 CH
+  - 🇫🇮 FI
+  - 🇰🇷 KR
+  - 🇲🇾 MY
+  - 🇵🇱 PL
+  - 🇸🇪 SE
+  - 🇹🇷 TR
+  - 🇿🇦 ZA
+  - 🇦🇲 AM
+  - 🇨🇿 CZ
+  - 🇪🇸 ES
+  - 🇭🇺 HU
+  - 🇮🇱 IL
+  - 🇳🇴 NO
+  - 🇷🇴 RO
+  - 🇷🇺 RU
+  - 🇸🇨 SC
+  - 🇹🇭 TH
+  - 🇻🇳 VN
   - 🌍 Others
 - name: Global - UrlTest(Tiers) 🥶
   type: url-test
@@ -66,155 +102,409 @@ proxy-groups:
   url: http://clients3.google.com/generate_204
   interval: 300
   include-all: true
+- name: 🇺🇸 US
+  type: url-test
+  url: http://clients3.google.com/generate_204
+  interval: 300
+  tolerance: 100
+  proxies:
+  - 🇺🇸 youneed ss 193.151.160.9:19999
+  - 🇺🇸 youneed ss 185.230.230.18:19999
+  - 🇺🇸 youneed ss 95.215.201.18:19999
+  - 🇺🇸 youneed ss 193.151.163.18:19999
+  - 🇺🇸 youneed ss 45.86.51.18:19999
+  - 🇺🇸 youneed ss 193.151.160.18:19999
+  - 🇺🇸 youneed ss 138.199.42.68:8080
+  - 🇺🇸 youneed ss 156.146.38.168:443
+  - 🇺🇸 youneed ss 156.146.38.169:443
+  - 🇺🇸 youneed ss 156.146.38.170:443
+  - 🇺🇸 youneed ss 37.19.198.244:443
+  - 🇺🇸 youneed ss 15.204.233.41:8882
+  - 🇺🇸 youneed vmess 38.91.107.49:18000
+  - 🇺🇸 youneed vmess 38.110.1.246:18000
+  - 🇺🇸 youneed vless 15.204.97.216:23576
+  - 🇺🇸 youneed vless 15.204.97.219:23576
+  - 🇺🇸 youneed vless 51.81.203.63:443
+  - 🇺🇸 youneed vless 169.40.42.104:443
+  - 🇺🇸 youneed vless 169.40.42.168:443
+  - 🇺🇸 youneed vless 169.40.42.235:443
+  - 🇺🇸 youneed vless 169.40.42.35:443
+  - 🇺🇸 youneed trojan 165.215.250.14:443
+  - 🇺🇸 youneed trojan tjmg1.m2k699.com:24999
+  - 🇺🇸 youneed trojan tjmg2.m2k699.com:24999
+  - 🇺🇸 youneed trojan 66.23.203.21:59689
+  - 🇺🇸 youneed hysteria2 198.46.146.118:36720
+  - 🇺🇸 youneed hysteria2 155.117.19.17:443
+  - 🇺🇸 youneed hysteria2 hy2.123266.xyz:33333
+  - 🇺🇸 youneed hysteria2 163.192.14.135:50160
+  - 🇺🇸 youneed hysteria2 129.213.91.185:35013
+  - 🇺🇸 youneed vless jdy7.ea7.lol:21899
+  - 🇺🇸 youneed trojan www.777061.xyz:18603
+- name: 🇳🇱 NL
+  type: url-test
+  url: http://clients3.google.com/generate_204
+  interval: 300
+  tolerance: 100
+  proxies:
+  - 🇳🇱 youneed ss 193.29.139.235:8080
+  - 🇳🇱 youneed ss 82.38.31.149:8080
+  - 🇳🇱 youneed ss 82.38.31.155:8080
+  - 🇳🇱 youneed ss 82.38.31.157:8080
+  - 🇳🇱 youneed ss 82.38.31.159:443
+  - 🇳🇱 youneed ss 82.38.31.16:8080
+  - 🇳🇱 youneed ss 82.38.31.170:443
+  - 🇳🇱 youneed ss 82.38.31.171:8080
+  - 🇳🇱 youneed ss 82.38.31.174:443
+  - 🇳🇱 youneed ss 82.38.31.174:8080
+  - 🇳🇱 youneed ss 82.38.31.2:8080
+  - 🇳🇱 youneed ss 82.38.31.46:8080
+  - 🇳🇱 youneed ss 82.38.31.49:8080
+  - 🇳🇱 youneed ss 82.38.31.61:8080
+  - 🇳🇱 youneed ss 82.38.31.66:8080
+  - 🇳🇱 youneed ss 82.38.31.82:8080
+  - 🇳🇱 youneed ss 109.201.152.181:443
+  - 🇳🇱 youneed vless 94.237.46.104:443
+  - 🇳🇱 youneed vless free-amsterdam-node-1.cloudwidecdn.com:443
+  - 🇳🇱 youneed vless 51.158.206.12:23576
+  - 🇳🇱 youneed vless 51.158.206.20:23576
+  - 🇳🇱 youneed vless 51.158.206.80:23576
+  - 🇳🇱 youneed trojan 45.87.41.18:443
+  - 🇳🇱 youneed hysteria2 130.49.161.70:443
+  - 🇳🇱 youneed hysteria2 hy2.aspidnet.xyz:443
+  - 🇳🇱 youneed hysteria2 nl-hy-test.tcp-reset-club.net:443
+  - 🇳🇱 youneed vless 213.152.165.201:2094
+  - 🇳🇱 youneed vless 213.152.165.203:2093
+- name: 🇹🇼 TW
+  type: url-test
+  url: http://clients3.google.com/generate_204
+  interval: 300
+  tolerance: 100
+  proxies:
+  - 🇹🇼 youneed vless forwarded.frnhk.xyz:53001
+  - 🇹🇼 youneed vless forwarded.frnhk.xyz:2083
+  - 🇹🇼 youneed vless forwarded.frnhk.xyz:53002
+  - 🇹🇼 youneed vless forwarded.frnhk.xyz:2096
+  - '🇹🇼 youneed vless forwarded.frnhk.xyz:53001 #2'
+  - '🇹🇼 youneed vless forwarded.frnhk.xyz:2083 #2'
+  - '🇹🇼 youneed vless forwarded.frnhk.xyz:53002 #2'
+  - '🇹🇼 youneed vless forwarded.frnhk.xyz:2096 #2'
+  - '🇹🇼 youneed vless forwarded.frnhk.xyz:53001 #3'
+  - '🇹🇼 youneed vless forwarded.frnhk.xyz:2083 #3'
+  - '🇹🇼 youneed vless forwarded.frnhk.xyz:53002 #3'
+  - '🇹🇼 youneed vless forwarded.frnhk.xyz:2096 #3'
+  - 🇹🇼 youneed trojan tjtw.m2k699.com:24999
+  - 🇹🇼 youneed hysteria2 103.115.109.49:443
+  - 🇹🇼 youneed hysteria2 160.187.100.109:443
+  - 🇹🇼 youneed hysteria2 vpn-tw-002.fastervpn.world:443
+  - 🇹🇼 youneed hysteria2 twtwtw.459292.xyz:30001
+- name: 🇮🇹 IT
+  type: url-test
+  url: http://clients3.google.com/generate_204
+  interval: 300
+  tolerance: 100
+  proxies:
+  - 🇮🇹 youneed ss 202.50.253.63:19999
+  - 🇮🇹 youneed ss 202.50.253.72:19999
+  - 🇮🇹 youneed ss 202.50.253.18:19999
+  - 🇮🇹 youneed ss 202.50.253.99:19999
+  - 🇮🇹 youneed ss 202.50.253.45:19999
+  - 🇮🇹 youneed ss 202.50.253.36:19999
+  - 🇮🇹 youneed ss 202.50.253.81:19999
+  - 🇮🇹 youneed ss 202.50.253.90:19999
+  - 🇮🇹 youneed ss 202.50.253.27:19999
+  - 🇮🇹 youneed ss 185.164.175.81:19999
+  - 🇮🇹 youneed ss 57.131.48.45:8388
+  - 🇮🇹 youneed vless 204.216.216.23:10086
+  - 🇮🇹 youneed ss 202.50.253.54:19999
+- name: 🇭🇰 HK
+  type: url-test
+  url: http://clients3.google.com/generate_204
+  interval: 300
+  tolerance: 100
+  proxies:
+  - 🇭🇰 youneed vless 195.58.144.56:11907
+  - 🇭🇰 youneed trojan tjxg.m2k699.com:24999
+  - 🇭🇰 youneed trojan tjyn.m2k699.com:24999
+  - 🇭🇰 youneed trojan tjflb.m2k699.com:24999
+  - 🇭🇰 youneed trojan tjadly.m2k699.com:24999
+  - 🇭🇰 youneed trojan tjterq.m2k699.com:24999
+  - 🇭🇰 youneed trojan tjjnd.m2k699.com:24999
+  - 🇭🇰 youneed trojan tjyg.m2k699.com:24999
+  - 🇭🇰 youneed trojan tjmlxy.m2k699.com:24999
+  - 🇭🇰 youneed trojan 2.27.109.179:45464
+  - 🇭🇰 youneed vless hk1.frnhk.xyz:443
+- name: 🇨🇦 CA
+  type: url-test
+  url: http://clients3.google.com/generate_204
+  interval: 300
+  tolerance: 100
+  proxies:
+  - 🇨🇦 youneed ss 51.222.141.125:445
+  - 🇨🇦 youneed ss 51.79.85.185:8118
+  - 🇨🇦 youneed ss 51.222.200.165:5000
+  - 🇨🇦 youneed ss 51.222.136.236:8882
+  - 🇨🇦 youneed ss 51.222.155.113:5601
+  - 🇨🇦 youneed ss 51.222.155.32:5003
+  - 🇨🇦 youneed ss 51.79.64.198:8119
+  - 🇨🇦 youneed ss 51.79.49.116:8882
+  - 🇨🇦 youneed ss 51.222.12.127:445
+  - 🇨🇦 youneed ss 149.22.95.183:443
+- name: 🇩🇪 DE
+  type: url-test
+  url: http://clients3.google.com/generate_204
+  interval: 300
+  tolerance: 100
+  proxies:
+  - 🇩🇪 youneed ss 185.176.204.18:19999
+  - 🇩🇪 youneed vless milo.rubinaz.xyz:8080
+  - 🇩🇪 youneed vless 5.252.179.15:443
+  - 🇩🇪 youneed trojan 185.255.179.166:443
+  - 🇩🇪 youneed trojan 185.220.100.168:443
+  - 🇩🇪 youneed trojan 161.35.192.122:443
+  - 🇩🇪 youneed hysteria2 162.249.125.133:443
+  - 🇩🇪 youneed hysteria2 179.61.138.145:36264
+- name: 🇬🇧 GB
+  type: url-test
+  url: http://clients3.google.com/generate_204
+  interval: 300
+  tolerance: 100
+  proxies:
+  - 🇬🇧 youneed ss 82.110.60.9:19999
+  - 🇬🇧 youneed ss 185.176.206.9:19999
+  - 🇬🇧 youneed ss 146.70.61.37:8080
+  - 🇬🇧 youneed ss 141.98.101.181:443
+  - 🇬🇧 youneed vless node-uk.connectsuite.org:8443
+  - 🇬🇧 youneed vless 159.65.51.189:443
+  - 🇬🇧 youneed vless 83.147.18.75:443
+- name: 🇯🇵 JP
+  type: url-test
+  url: http://clients3.google.com/generate_204
+  interval: 300
+  tolerance: 100
+  proxies:
+  - 🇯🇵 youneed ss 154.36.158.197:8388
+  - 🇯🇵 youneed ss 84.247.155.196:80
+  - 🇯🇵 youneed ss 84.247.155.196:443
+  - 🇯🇵 youneed ss 149.22.87.240:443
+  - 🇯🇵 youneed vless 137.220.221.179:443
+  - 🇯🇵 youneed trojan tjrb.m2k699.com:24999
+  - 🇯🇵 youneed ss 191.223.221.53:8388
+- name: 🇸🇬 SG
+  type: url-test
+  url: http://clients3.google.com/generate_204
+  interval: 300
+  tolerance: 100
+  proxies:
+  - 🇸🇬 youneed ss 68.183.227.4:8080
+  - 🇸🇬 youneed vmess 149.88.23.207:18000
+  - 🇸🇬 youneed vless 43.174.193.1:443
+  - 🇸🇬 youneed vless 54.169.200.246:41688
+  - 🇸🇬 youneed vless 139.162.27.96:2096
+  - 🇸🇬 youneed trojan tjxjp.m2k699.com:24999
+- name: 🇮🇳 IN
+  type: url-test
+  url: http://clients3.google.com/generate_204
+  interval: 300
+  tolerance: 100
+  proxies:
+  - 🇮🇳 youneed vless 5.253.29.254:10443
+  - 🇮🇳 youneed vless 13.140.56.100:14430
+  - '🇮🇳 youneed vless 13.140.56.100:14430 #2'
+  - 🇮🇳 youneed vless 194.61.31.126:2053
+- name: 🇫🇷 FR
+  type: url-test
+  url: http://clients3.google.com/generate_204
+  interval: 300
+  tolerance: 100
+  proxies:
+  - 🇫🇷 youneed vless 138.124.70.41:14430
+  - 🇫🇷 youneed vless connect.hondamotor.site:10002
+  - 🇫🇷 youneed vless 152.228.139.33:51671
+- name: 🇲🇪 ME
+  type: url-test
+  url: http://clients3.google.com/generate_204
+  interval: 300
+  tolerance: 100
+  proxies:
+  - 🇲🇪 youneed vless 31.57.190.89:443
+  - '🇲🇪 youneed vless 31.57.190.89:443 #2'
+  - 🇲🇪 youneed trojan 31.57.190.71:443
+- name: 🇦🇪 AE
+  type: url-test
+  url: http://clients3.google.com/generate_204
+  interval: 300
+  tolerance: 100
+  proxies:
+  - 🇦🇪 youneed vless 95.174.68.188:14430
+  - 🇦🇪 youneed vless uae.unixzone.us:22573
+- name: 🇧🇾 BY
+  type: url-test
+  url: http://clients3.google.com/generate_204
+  interval: 300
+  tolerance: 100
+  proxies:
+  - 🇧🇾 youneed vless 178.172.227.124:14430
+  - 🇧🇾 youneed vless 95.128.71.79:14430
+- name: 🇨🇭 CH
+  type: url-test
+  url: http://clients3.google.com/generate_204
+  interval: 300
+  tolerance: 100
+  proxies:
+  - 🇨🇭 youneed ss 132.243.175.144:8388
+  - 🇨🇭 youneed hysteria2 152.67.75.161:443
+- name: 🇫🇮 FI
+  type: url-test
+  url: http://clients3.google.com/generate_204
+  interval: 300
+  tolerance: 100
+  proxies:
+  - 🇫🇮 youneed vless 45.144.234.157:14430
+  - 🇫🇮 youneed vless 87.239.249.137:443
+- name: 🇰🇷 KR
+  type: url-test
+  url: http://clients3.google.com/generate_204
+  interval: 300
+  tolerance: 100
+  proxies:
+  - 🇰🇷 youneed vless 3.39.4.109:13672
+  - 🇰🇷 youneed trojan tjhg.m2k699.com:24999
+- name: 🇲🇾 MY
+  type: url-test
+  url: http://clients3.google.com/generate_204
+  interval: 300
+  tolerance: 100
+  proxies:
+  - 🇲🇾 youneed vless 216.173.67.59:443
+  - '🇲🇾 youneed vless 216.173.67.59:443 #2'
+- name: 🇵🇱 PL
+  type: url-test
+  url: http://clients3.google.com/generate_204
+  interval: 300
+  tolerance: 100
+  proxies:
+  - 🇵🇱 youneed vless edge10.cyrionflare.com:2052
+  - 🇵🇱 youneed vless 54.37.136.194:2053
+- name: 🇸🇪 SE
+  type: url-test
+  url: http://clients3.google.com/generate_204
+  interval: 300
+  tolerance: 100
+  proxies:
+  - 🇸🇪 youneed vless 5.178.109.174:14430
+  - 🇸🇪 youneed vless 77.110.97.245:443
+- name: 🇹🇷 TR
+  type: url-test
+  url: http://clients3.google.com/generate_204
+  interval: 300
+  tolerance: 100
+  proxies:
+  - 🇹🇷 youneed vless 155.103.71.142:443
+  - 🇹🇷 youneed vless 78.135.73.47:443
+- name: 🇿🇦 ZA
+  type: url-test
+  url: http://clients3.google.com/generate_204
+  interval: 300
+  tolerance: 100
+  proxies:
+  - 🇿🇦 youneed ss 102.37.156.224:443
+  - 🇿🇦 youneed ss 102.133.165.160:16233
+- name: 🇦🇲 AM
+  type: url-test
+  url: http://clients3.google.com/generate_204
+  interval: 300
+  tolerance: 100
+  proxies:
+  - 🇦🇲 youneed vless 194.36.37.59:10004
+- name: 🇨🇿 CZ
+  type: url-test
+  url: http://clients3.google.com/generate_204
+  interval: 300
+  tolerance: 100
+  proxies:
+  - 🇨🇿 youneed ss 67.159.18.34:17001
+- name: 🇪🇸 ES
+  type: url-test
+  url: http://clients3.google.com/generate_204
+  interval: 300
+  tolerance: 100
+  proxies:
+  - 🇪🇸 youneed trojan 185.114.72.31:2053
+- name: 🇭🇺 HU
+  type: url-test
+  url: http://clients3.google.com/generate_204
+  interval: 300
+  tolerance: 100
+  proxies:
+  - 🇭🇺 youneed trojan 185.225.68.232:443
+- name: 🇮🇱 IL
+  type: url-test
+  url: http://clients3.google.com/generate_204
+  interval: 300
+  tolerance: 100
+  proxies:
+  - 🇮🇱 youneed vless 185.253.75.119:443
+- name: 🇳🇴 NO
+  type: url-test
+  url: http://clients3.google.com/generate_204
+  interval: 300
+  tolerance: 100
+  proxies:
+  - 🇳🇴 youneed ss 185.213.23.63:990
+- name: 🇷🇴 RO
+  type: url-test
+  url: http://clients3.google.com/generate_204
+  interval: 300
+  tolerance: 100
+  proxies:
+  - 🇷🇴 youneed ss bogging-eyeteeth-fly.freesocks.work:443
+- name: 🇷🇺 RU
+  type: url-test
+  url: http://clients3.google.com/generate_204
+  interval: 300
+  tolerance: 100
+  proxies:
+  - 🇷🇺 youneed vless xsru1.ddnsfree.com:443
+- name: 🇸🇨 SC
+  type: url-test
+  url: http://clients3.google.com/generate_204
+  interval: 300
+  tolerance: 100
+  proxies:
+  - 🇸🇨 youneed trojan 45.130.125.160:443
+- name: 🇹🇭 TH
+  type: url-test
+  url: http://clients3.google.com/generate_204
+  interval: 300
+  tolerance: 100
+  proxies:
+  - 🇹🇭 youneed ss pphfree2.mvpnpvpn.de5.net:52351
+- name: 🇻🇳 VN
+  type: url-test
+  url: http://clients3.google.com/generate_204
+  interval: 300
+  tolerance: 100
+  proxies:
+  - 🇻🇳 youneed vless 150.95.109.109:2086
 - name: 🌍 Others
   type: url-test
   url: http://clients3.google.com/generate_204
   interval: 300
   tolerance: 100
   proxies:
-  - youneed ss 82.110.60.9:19999
-  - youneed ss 51.222.141.125:445
-  - youneed ss 51.79.85.185:8118
-  - youneed ss 51.222.200.165:5000
-  - youneed ss 51.222.136.236:8882
-  - youneed ss 51.222.155.113:5601
-  - youneed ss 51.222.155.32:5003
-  - youneed ss 51.79.64.198:8119
-  - youneed ss 51.79.49.116:8882
-  - youneed ss 51.222.12.127:445
-  - youneed ss 132.243.175.144:8388
-  - youneed ss 67.159.18.34:17001
-  - youneed ss 185.176.204.18:19999
-  - youneed ss 185.176.206.9:19999
-  - youneed ss 202.50.253.63:19999
-  - youneed ss 202.50.253.72:19999
-  - youneed ss 202.50.253.18:19999
-  - youneed ss 202.50.253.99:19999
-  - youneed ss 202.50.253.45:19999
-  - youneed ss 202.50.253.36:19999
-  - youneed ss 202.50.253.81:19999
-  - youneed ss 202.50.253.90:19999
-  - youneed ss 202.50.253.27:19999
-  - youneed ss 185.164.175.81:19999
-  - youneed ss 57.131.48.45:8388
-  - youneed ss 154.36.158.197:8388
-  - youneed ss 84.247.155.196:80
-  - youneed ss 185.213.23.63:990
-  - youneed ss bogging-eyeteeth-fly.freesocks.work:443
-  - youneed ss pphfree2.mvpnpvpn.de5.net:52351
-  - youneed ss 193.151.160.9:19999
-  - youneed ss 185.230.230.18:19999
-  - youneed ss 95.215.201.18:19999
-  - youneed ss 102.37.156.224:443
-  - youneed ss 102.133.165.160:16233
-  - youneed ss 84.247.155.196:443
-  - youneed ss 193.151.163.18:19999
-  - youneed ss 45.86.51.18:19999
-  - youneed ss 193.151.160.18:19999
-  - youneed ss 138.199.42.68:8080
-  - youneed ss 146.70.61.37:8080
-  - youneed ss 68.183.227.4:8080
-  - youneed ss 193.29.139.235:8080
-  - youneed ss 82.38.31.149:8080
-  - youneed ss 82.38.31.155:8080
-  - youneed ss 82.38.31.157:8080
-  - youneed ss 82.38.31.159:443
-  - youneed ss 82.38.31.16:8080
-  - youneed ss 82.38.31.170:443
-  - youneed ss 82.38.31.171:8080
-  - youneed ss 82.38.31.174:443
-  - youneed ss 82.38.31.174:8080
-  - youneed ss 82.38.31.2:8080
-  - youneed ss 82.38.31.46:8080
-  - youneed ss 82.38.31.49:8080
-  - youneed ss 82.38.31.61:8080
-  - youneed ss 82.38.31.66:8080
-  - youneed ss 82.38.31.82:8080
-  - youneed ss 109.201.152.181:443
-  - youneed ss 141.98.101.181:443
-  - youneed ss 149.22.87.240:443
-  - youneed ss 149.22.95.183:443
-  - youneed ss 156.146.38.168:443
-  - youneed ss 156.146.38.169:443
-  - youneed ss 156.146.38.170:443
-  - youneed ss 37.19.198.244:443
-  - youneed ss 15.204.233.41:8882
-  - youneed vmess 149.88.23.207:18000
-  - youneed vmess 38.91.107.49:18000
-  - youneed vmess 38.110.1.246:18000
-  - youneed vless forwarded.frnhk.xyz:53001
-  - youneed vless forwarded.frnhk.xyz:2083
-  - youneed vless forwarded.frnhk.xyz:53002
-  - youneed vless forwarded.frnhk.xyz:2096
-  - 'youneed vless forwarded.frnhk.xyz:53001 #2'
-  - 'youneed vless forwarded.frnhk.xyz:2083 #2'
-  - 'youneed vless forwarded.frnhk.xyz:53002 #2'
-  - 'youneed vless forwarded.frnhk.xyz:2096 #2'
-  - 'youneed vless forwarded.frnhk.xyz:53001 #3'
-  - 'youneed vless forwarded.frnhk.xyz:2083 #3'
-  - 'youneed vless forwarded.frnhk.xyz:53002 #3'
-  - 'youneed vless forwarded.frnhk.xyz:2096 #3'
-  - youneed vless 95.174.68.188:14430
-  - youneed vless uae.unixzone.us:22573
-  - youneed vless 194.36.37.59:10004
-  - youneed vless 155.103.71.142:443
-  - youneed vless 178.172.227.124:14430
-  - youneed vless 95.128.71.79:14430
-  - youneed vless milo.rubinaz.xyz:8080
-  - youneed vless 43.174.193.1:443
-  - youneed vless 31.57.190.89:443
-  - youneed vless 45.144.234.157:14430
-  - youneed vless 138.124.70.41:14430
-  - youneed vless connect.hondamotor.site:10002
-  - youneed vless node-uk.connectsuite.org:8443
-  - youneed vless 195.58.144.56:11907
-  - youneed vless 185.253.75.119:443
-  - youneed vless 5.253.29.254:10443
-  - youneed vless 13.140.56.100:14430
-  - youneed vless 204.216.216.23:10086
   - youneed vless cf.090227.xyz:443
-  - youneed vless 137.220.221.179:443
-  - youneed vless 216.173.67.59:443
-  - youneed vless 94.237.46.104:443
-  - youneed vless edge10.cyrionflare.com:2052
-  - youneed vless 5.178.109.174:14430
-  - 'youneed vless 216.173.67.59:443 #2'
   - youneed vless 172.67.71.187:8080
-  - youneed vless 150.95.109.109:2086
   - youneed vless nexusmods.com:443
   - youneed vless youxuan.cf.090227.xyz:443
-  - 'youneed vless 13.140.56.100:14430 #2'
   - youneed vless 172.64.152.241:443
   - youneed vless 104.18.40.100:443
   - youneed vless 104.17.162.11:2082
-  - 'youneed vless 31.57.190.89:443 #2'
-  - youneed vless 159.65.51.189:443
   - youneed vless 104.26.4.2:443
   - youneed vless cf.877774.xyz:443
   - youneed vless 104.18.35.86:2082
-  - youneed vless 5.252.179.15:443
-  - youneed vless 194.61.31.126:2053
-  - youneed vless 78.135.73.47:443
-  - youneed vless free-amsterdam-node-1.cloudwidecdn.com:443
-  - youneed vless 15.204.97.216:23576
-  - youneed vless 15.204.97.219:23576
-  - youneed vless 51.158.206.12:23576
-  - youneed vless 51.158.206.20:23576
-  - youneed vless 51.158.206.80:23576
-  - youneed vless 54.169.200.246:41688
-  - youneed vless 83.147.18.75:443
-  - youneed vless 87.239.249.137:443
-  - youneed vless 139.162.27.96:2096
-  - youneed vless 152.228.139.33:51671
-  - youneed vless 51.81.203.63:443
   - 'youneed vless 104.26.4.2:443 #2'
   - youneed vless 172.66.0.162:443
-  - youneed vless 169.40.42.104:443
-  - youneed vless 169.40.42.168:443
-  - youneed vless 169.40.42.235:443
-  - youneed vless 169.40.42.35:443
   - youneed vless 104.18.0.181:2082
-  - youneed vless 54.37.136.194:2053
   - 'youneed vless 172.64.152.241:443 #2'
   - youneed vless cf.130519.xyz:443
   - 'youneed vless cf.877774.xyz:443 #2'
@@ -222,54 +512,8 @@ proxy-groups:
   - youneed vless 104.18.35.86:8080
   - 'youneed vless cf.877774.xyz:443 #3'
   - youneed vless 172.64.150.28:2082
-  - youneed vless 3.39.4.109:13672
-  - youneed trojan 185.255.179.166:443
-  - youneed trojan 185.225.68.232:443
-  - youneed trojan 45.87.41.18:443
-  - youneed trojan 185.114.72.31:2053
-  - youneed trojan 45.130.125.160:443
-  - youneed trojan 185.220.100.168:443
   - youneed trojan 104.19.229.21:443
-  - youneed trojan 165.215.250.14:443
   - youneed trojan 172.66.40.99:443
-  - youneed trojan 161.35.192.122:443
-  - youneed trojan 31.57.190.71:443
-  - youneed trojan tjxg.m2k699.com:24999
-  - youneed trojan tjrb.m2k699.com:24999
-  - youneed trojan tjtw.m2k699.com:24999
-  - youneed trojan tjyn.m2k699.com:24999
-  - youneed trojan tjhg.m2k699.com:24999
-  - youneed trojan tjxjp.m2k699.com:24999
-  - youneed trojan tjflb.m2k699.com:24999
-  - youneed trojan tjadly.m2k699.com:24999
-  - youneed trojan tjterq.m2k699.com:24999
-  - youneed trojan tjjnd.m2k699.com:24999
-  - youneed trojan tjyg.m2k699.com:24999
-  - youneed trojan tjmg1.m2k699.com:24999
-  - youneed trojan tjmg2.m2k699.com:24999
-  - youneed trojan tjmlxy.m2k699.com:24999
-  - youneed trojan 2.27.109.179:45464
-  - youneed trojan 66.23.203.21:59689
-  - youneed hysteria2 198.46.146.118:36720
-  - youneed hysteria2 155.117.19.17:443
-  - youneed hysteria2 103.115.109.49:443
-  - youneed hysteria2 160.187.100.109:443
-  - youneed hysteria2 vpn-tw-002.fastervpn.world:443
-  - youneed hysteria2 162.249.125.133:443
-  - youneed hysteria2 179.61.138.145:36264
-  - youneed hysteria2 hy2.123266.xyz:33333
-  - youneed hysteria2 130.49.161.70:443
-  - youneed hysteria2 twtwtw.459292.xyz:30001
-  - youneed hysteria2 163.192.14.135:50160
-  - youneed hysteria2 129.213.91.185:35013
-  - youneed hysteria2 hy2.aspidnet.xyz:443
-  - youneed hysteria2 nl-hy-test.tcp-reset-club.net:443
-  - youneed hysteria2 152.67.75.161:443
-  - youneed ss 202.50.253.54:19999
-  - youneed ss 191.223.221.53:8388
-  - youneed vless hk1.frnhk.xyz:443
-  - youneed vless 77.110.97.245:443
-  - youneed vless xsru1.ddnsfree.com:443
   - 'youneed vless nexusmods.com:443 #2'
   - 'youneed vless youxuan.cf.090227.xyz:443 #2'
 rules:
@@ -297,430 +541,430 @@ sniffer:
       - 443
       - 8443
 proxies:
-- name: youneed ss 82.110.60.9:19999
+- name: 🇬🇧 youneed ss 82.110.60.9:19999
   type: ss
   server: 82.110.60.9
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: youneed ss 51.222.141.125:445
+- name: 🇨🇦 youneed ss 51.222.141.125:445
   type: ss
   server: 51.222.141.125
   port: 445
   cipher: aes-256-gcm
   password: zDNVedRFPQexG9v
-- name: youneed ss 51.79.85.185:8118
+- name: 🇨🇦 youneed ss 51.79.85.185:8118
   type: ss
   server: 51.79.85.185
   port: 8118
   cipher: aes-256-gcm
   password: cdBIDV42DCwnfIN
-- name: youneed ss 51.222.200.165:5000
+- name: 🇨🇦 youneed ss 51.222.200.165:5000
   type: ss
   server: 51.222.200.165
   port: 5000
   cipher: aes-256-gcm
   password: Y6R9pAtvxxzmGC
-- name: youneed ss 51.222.136.236:8882
+- name: 🇨🇦 youneed ss 51.222.136.236:8882
   type: ss
   server: 51.222.136.236
   port: 8882
   cipher: aes-256-gcm
   password: kDWvXYZoTBcGkC4
-- name: youneed ss 51.222.155.113:5601
+- name: 🇨🇦 youneed ss 51.222.155.113:5601
   type: ss
   server: 51.222.155.113
   port: 5601
   cipher: aes-256-gcm
   password: Y6R9pAtvxxzmGC
-- name: youneed ss 51.222.155.32:5003
+- name: 🇨🇦 youneed ss 51.222.155.32:5003
   type: ss
   server: 51.222.155.32
   port: 5003
   cipher: aes-256-gcm
   password: g5MeD6Ft3CWlJId
-- name: youneed ss 51.79.64.198:8119
+- name: 🇨🇦 youneed ss 51.79.64.198:8119
   type: ss
   server: 51.79.64.198
   port: 8119
   cipher: aes-256-gcm
   password: cdBIDV42DCwnfIN
-- name: youneed ss 51.79.49.116:8882
+- name: 🇨🇦 youneed ss 51.79.49.116:8882
   type: ss
   server: 51.79.49.116
   port: 8882
   cipher: aes-256-gcm
   password: kDWvXYZoTBcGkC4
-- name: youneed ss 51.222.12.127:445
+- name: 🇨🇦 youneed ss 51.222.12.127:445
   type: ss
   server: 51.222.12.127
   port: 445
   cipher: aes-256-gcm
   password: zDNVedRFPQexG9v
-- name: youneed ss 132.243.175.144:8388
+- name: 🇨🇭 youneed ss 132.243.175.144:8388
   type: ss
   server: 132.243.175.144
   port: 8388
   cipher: chacha20-ietf-poly1305
   password: e8KgS8fD0yDqYFpgN4G5piCOt9aFyqA3
-- name: youneed ss 67.159.18.34:17001
+- name: 🇨🇿 youneed ss 67.159.18.34:17001
   type: ss
   server: 67.159.18.34
   port: 17001
   cipher: aes-256-gcm
   password: I6o9NnialYLMEjVt28RF4dpjmr9wMvNL
-- name: youneed ss 185.176.204.18:19999
+- name: 🇩🇪 youneed ss 185.176.204.18:19999
   type: ss
   server: 185.176.204.18
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: youneed ss 185.176.206.9:19999
+- name: 🇬🇧 youneed ss 185.176.206.9:19999
   type: ss
   server: 185.176.206.9
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: youneed ss 202.50.253.63:19999
+- name: 🇮🇹 youneed ss 202.50.253.63:19999
   type: ss
   server: 202.50.253.63
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: youneed ss 202.50.253.72:19999
+- name: 🇮🇹 youneed ss 202.50.253.72:19999
   type: ss
   server: 202.50.253.72
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: youneed ss 202.50.253.18:19999
+- name: 🇮🇹 youneed ss 202.50.253.18:19999
   type: ss
   server: 202.50.253.18
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: youneed ss 202.50.253.99:19999
+- name: 🇮🇹 youneed ss 202.50.253.99:19999
   type: ss
   server: 202.50.253.99
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: youneed ss 202.50.253.45:19999
+- name: 🇮🇹 youneed ss 202.50.253.45:19999
   type: ss
   server: 202.50.253.45
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: youneed ss 202.50.253.36:19999
+- name: 🇮🇹 youneed ss 202.50.253.36:19999
   type: ss
   server: 202.50.253.36
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: youneed ss 202.50.253.81:19999
+- name: 🇮🇹 youneed ss 202.50.253.81:19999
   type: ss
   server: 202.50.253.81
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: youneed ss 202.50.253.90:19999
+- name: 🇮🇹 youneed ss 202.50.253.90:19999
   type: ss
   server: 202.50.253.90
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: youneed ss 202.50.253.27:19999
+- name: 🇮🇹 youneed ss 202.50.253.27:19999
   type: ss
   server: 202.50.253.27
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: youneed ss 185.164.175.81:19999
+- name: 🇮🇹 youneed ss 185.164.175.81:19999
   type: ss
   server: 185.164.175.81
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: youneed ss 57.131.48.45:8388
+- name: 🇮🇹 youneed ss 57.131.48.45:8388
   type: ss
   server: 57.131.48.45
   port: 8388
   cipher: aes-256-gcm
   password: itzvpn@321
-- name: youneed ss 154.36.158.197:8388
+- name: 🇯🇵 youneed ss 154.36.158.197:8388
   type: ss
   server: 154.36.158.197
   port: 8388
   cipher: aes-256-gcm
   password: BeaUf9c0AEWH40Pu
-- name: youneed ss 84.247.155.196:80
+- name: 🇯🇵 youneed ss 84.247.155.196:80
   type: ss
   server: 84.247.155.196
   port: 80
   cipher: aes-256-gcm
   password: 3eOFeNssde7PYYMv
-- name: youneed ss 185.213.23.63:990
+- name: 🇳🇴 youneed ss 185.213.23.63:990
   type: ss
   server: 185.213.23.63
   port: 990
   cipher: chacha20-ietf-poly1305
   password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
-- name: youneed ss bogging-eyeteeth-fly.freesocks.work:443
+- name: 🇷🇴 youneed ss bogging-eyeteeth-fly.freesocks.work:443
   type: ss
   server: bogging-eyeteeth-fly.freesocks.work
   port: 443
   cipher: chacha20-ietf-poly1305
   password: QFWzCw2uX9B9i6qAYeFBIE
-- name: youneed ss pphfree2.mvpnpvpn.de5.net:52351
+- name: 🇹🇭 youneed ss pphfree2.mvpnpvpn.de5.net:52351
   type: ss
   server: pphfree2.mvpnpvpn.de5.net
   port: 52351
   cipher: aes-256-gcm
   password: sxajCTwrlK0zl+zmHpX0p0jXIfatnzlLzWlSQ950L1c=
-- name: youneed ss 193.151.160.9:19999
+- name: 🇺🇸 youneed ss 193.151.160.9:19999
   type: ss
   server: 193.151.160.9
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: youneed ss 185.230.230.18:19999
+- name: 🇺🇸 youneed ss 185.230.230.18:19999
   type: ss
   server: 185.230.230.18
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: youneed ss 95.215.201.18:19999
+- name: 🇺🇸 youneed ss 95.215.201.18:19999
   type: ss
   server: 95.215.201.18
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: youneed ss 102.37.156.224:443
+- name: 🇿🇦 youneed ss 102.37.156.224:443
   type: ss
   server: 102.37.156.224
   port: 443
   cipher: chacha20-ietf-poly1305
   password: aduB9HGxQHjA2SBMRjkHX6
-- name: youneed ss 102.133.165.160:16233
+- name: 🇿🇦 youneed ss 102.133.165.160:16233
   type: ss
   server: 102.133.165.160
   port: 16233
   cipher: chacha20-ietf-poly1305
   password: Xsy8Ox4yOV3xLlpxtjzs3X
-- name: youneed ss 84.247.155.196:443
+- name: 🇯🇵 youneed ss 84.247.155.196:443
   type: ss
   server: 84.247.155.196
   port: 443
   cipher: aes-256-gcm
   password: 3eOFeNssde7PYYMv
-- name: youneed ss 193.151.163.18:19999
+- name: 🇺🇸 youneed ss 193.151.163.18:19999
   type: ss
   server: 193.151.163.18
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: youneed ss 45.86.51.18:19999
+- name: 🇺🇸 youneed ss 45.86.51.18:19999
   type: ss
   server: 45.86.51.18
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: youneed ss 193.151.160.18:19999
+- name: 🇺🇸 youneed ss 193.151.160.18:19999
   type: ss
   server: 193.151.160.18
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: youneed ss 138.199.42.68:8080
+- name: 🇺🇸 youneed ss 138.199.42.68:8080
   type: ss
   server: 138.199.42.68
   port: 8080
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
-- name: youneed ss 146.70.61.37:8080
+- name: 🇬🇧 youneed ss 146.70.61.37:8080
   type: ss
   server: 146.70.61.37
   port: 8080
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
-- name: youneed ss 68.183.227.4:8080
+- name: 🇸🇬 youneed ss 68.183.227.4:8080
   type: ss
   server: 68.183.227.4
   port: 8080
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
-- name: youneed ss 193.29.139.235:8080
+- name: 🇳🇱 youneed ss 193.29.139.235:8080
   type: ss
   server: 193.29.139.235
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: youneed ss 82.38.31.149:8080
+- name: 🇳🇱 youneed ss 82.38.31.149:8080
   type: ss
   server: 82.38.31.149
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: youneed ss 82.38.31.155:8080
+- name: 🇳🇱 youneed ss 82.38.31.155:8080
   type: ss
   server: 82.38.31.155
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: youneed ss 82.38.31.157:8080
+- name: 🇳🇱 youneed ss 82.38.31.157:8080
   type: ss
   server: 82.38.31.157
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: youneed ss 82.38.31.159:443
+- name: 🇳🇱 youneed ss 82.38.31.159:443
   type: ss
   server: 82.38.31.159
   port: 443
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: youneed ss 82.38.31.16:8080
+- name: 🇳🇱 youneed ss 82.38.31.16:8080
   type: ss
   server: 82.38.31.16
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: youneed ss 82.38.31.170:443
+- name: 🇳🇱 youneed ss 82.38.31.170:443
   type: ss
   server: 82.38.31.170
   port: 443
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: youneed ss 82.38.31.171:8080
+- name: 🇳🇱 youneed ss 82.38.31.171:8080
   type: ss
   server: 82.38.31.171
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: youneed ss 82.38.31.174:443
+- name: 🇳🇱 youneed ss 82.38.31.174:443
   type: ss
   server: 82.38.31.174
   port: 443
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: youneed ss 82.38.31.174:8080
+- name: 🇳🇱 youneed ss 82.38.31.174:8080
   type: ss
   server: 82.38.31.174
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: youneed ss 82.38.31.2:8080
+- name: 🇳🇱 youneed ss 82.38.31.2:8080
   type: ss
   server: 82.38.31.2
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: youneed ss 82.38.31.46:8080
+- name: 🇳🇱 youneed ss 82.38.31.46:8080
   type: ss
   server: 82.38.31.46
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: youneed ss 82.38.31.49:8080
+- name: 🇳🇱 youneed ss 82.38.31.49:8080
   type: ss
   server: 82.38.31.49
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: youneed ss 82.38.31.61:8080
+- name: 🇳🇱 youneed ss 82.38.31.61:8080
   type: ss
   server: 82.38.31.61
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: youneed ss 82.38.31.66:8080
+- name: 🇳🇱 youneed ss 82.38.31.66:8080
   type: ss
   server: 82.38.31.66
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: youneed ss 82.38.31.82:8080
+- name: 🇳🇱 youneed ss 82.38.31.82:8080
   type: ss
   server: 82.38.31.82
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: youneed ss 109.201.152.181:443
+- name: 🇳🇱 youneed ss 109.201.152.181:443
   type: ss
   server: 109.201.152.181
   port: 443
   cipher: aes-128-cfb
   password: shadowsocks
-- name: youneed ss 141.98.101.181:443
+- name: 🇬🇧 youneed ss 141.98.101.181:443
   type: ss
   server: 141.98.101.181
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
-- name: youneed ss 149.22.87.240:443
+- name: 🇯🇵 youneed ss 149.22.87.240:443
   type: ss
   server: 149.22.87.240
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
-- name: youneed ss 149.22.95.183:443
+- name: 🇨🇦 youneed ss 149.22.95.183:443
   type: ss
   server: 149.22.95.183
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
-- name: youneed ss 156.146.38.168:443
+- name: 🇺🇸 youneed ss 156.146.38.168:443
   type: ss
   server: 156.146.38.168
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
-- name: youneed ss 156.146.38.169:443
+- name: 🇺🇸 youneed ss 156.146.38.169:443
   type: ss
   server: 156.146.38.169
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
-- name: youneed ss 156.146.38.170:443
+- name: 🇺🇸 youneed ss 156.146.38.170:443
   type: ss
   server: 156.146.38.170
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
-- name: youneed ss 37.19.198.244:443
+- name: 🇺🇸 youneed ss 37.19.198.244:443
   type: ss
   server: 37.19.198.244
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
-- name: youneed ss 15.204.233.41:8882
+- name: 🇺🇸 youneed ss 15.204.233.41:8882
   type: ss
   server: 15.204.233.41
   port: 8882
   cipher: aes-256-gcm
   password: kDWvXYZoTBcGkC4
-- name: youneed vmess 149.88.23.207:18000
+- name: 🇸🇬 youneed vmess 149.88.23.207:18000
   type: vmess
   server: 149.88.23.207
   port: 18000
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
   alterId: 0
   cipher: auto
-- name: youneed vmess 38.91.107.49:18000
+- name: 🇺🇸 youneed vmess 38.91.107.49:18000
   type: vmess
   server: 38.91.107.49
   port: 18000
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
   alterId: 0
   cipher: auto
-- name: youneed vmess 38.110.1.246:18000
+- name: 🇺🇸 youneed vmess 38.110.1.246:18000
   type: vmess
   server: 38.110.1.246
   port: 18000
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
   alterId: 0
   cipher: auto
-- name: youneed vless forwarded.frnhk.xyz:53001
+- name: 🇹🇼 youneed vless forwarded.frnhk.xyz:53001
   type: vless
   server: forwarded.frnhk.xyz
   port: 53001
@@ -733,7 +977,7 @@ proxies:
   reality-opts:
     public-key: cQ7NxSTK7evdY-Qy59zuC-omalkDhnTQ3Mb1powlxjs
     short-id: 5c1944
-- name: youneed vless forwarded.frnhk.xyz:2083
+- name: 🇹🇼 youneed vless forwarded.frnhk.xyz:2083
   type: vless
   server: forwarded.frnhk.xyz
   port: 2083
@@ -746,7 +990,7 @@ proxies:
   reality-opts:
     public-key: zDMINFaRxcXKIpCvVD7UW7PJ5ZSYb_DQ3hkGobU07Ro
     short-id: 43ec82
-- name: youneed vless forwarded.frnhk.xyz:53002
+- name: 🇹🇼 youneed vless forwarded.frnhk.xyz:53002
   type: vless
   server: forwarded.frnhk.xyz
   port: 53002
@@ -759,7 +1003,7 @@ proxies:
   reality-opts:
     public-key: 3lswNoHV1RqK6yO--0ZWoYh1WqHkfhKQph3onxE_1So
     short-id: fc04
-- name: youneed vless forwarded.frnhk.xyz:2096
+- name: 🇹🇼 youneed vless forwarded.frnhk.xyz:2096
   type: vless
   server: forwarded.frnhk.xyz
   port: 2096
@@ -772,7 +1016,7 @@ proxies:
   reality-opts:
     public-key: GEEarJRHLYhymJBPxhQ1yuHq07RhTaC5Cjb6Jp2hKVw
     short-id: 67e4c41af23cc5
-- name: 'youneed vless forwarded.frnhk.xyz:53001 #2'
+- name: '🇹🇼 youneed vless forwarded.frnhk.xyz:53001 #2'
   type: vless
   server: forwarded.frnhk.xyz
   port: 53001
@@ -785,7 +1029,7 @@ proxies:
   reality-opts:
     public-key: cQ7NxSTK7evdY-Qy59zuC-omalkDhnTQ3Mb1powlxjs
     short-id: 5c1944
-- name: 'youneed vless forwarded.frnhk.xyz:2083 #2'
+- name: '🇹🇼 youneed vless forwarded.frnhk.xyz:2083 #2'
   type: vless
   server: forwarded.frnhk.xyz
   port: 2083
@@ -798,7 +1042,7 @@ proxies:
   reality-opts:
     public-key: zDMINFaRxcXKIpCvVD7UW7PJ5ZSYb_DQ3hkGobU07Ro
     short-id: 43ec82
-- name: 'youneed vless forwarded.frnhk.xyz:53002 #2'
+- name: '🇹🇼 youneed vless forwarded.frnhk.xyz:53002 #2'
   type: vless
   server: forwarded.frnhk.xyz
   port: 53002
@@ -811,7 +1055,7 @@ proxies:
   reality-opts:
     public-key: 3lswNoHV1RqK6yO--0ZWoYh1WqHkfhKQph3onxE_1So
     short-id: fc04
-- name: 'youneed vless forwarded.frnhk.xyz:2096 #2'
+- name: '🇹🇼 youneed vless forwarded.frnhk.xyz:2096 #2'
   type: vless
   server: forwarded.frnhk.xyz
   port: 2096
@@ -824,7 +1068,7 @@ proxies:
   reality-opts:
     public-key: GEEarJRHLYhymJBPxhQ1yuHq07RhTaC5Cjb6Jp2hKVw
     short-id: 67e4c41af23cc5
-- name: 'youneed vless forwarded.frnhk.xyz:53001 #3'
+- name: '🇹🇼 youneed vless forwarded.frnhk.xyz:53001 #3'
   type: vless
   server: forwarded.frnhk.xyz
   port: 53001
@@ -837,7 +1081,7 @@ proxies:
   reality-opts:
     public-key: cQ7NxSTK7evdY-Qy59zuC-omalkDhnTQ3Mb1powlxjs
     short-id: 5c1944
-- name: 'youneed vless forwarded.frnhk.xyz:2083 #3'
+- name: '🇹🇼 youneed vless forwarded.frnhk.xyz:2083 #3'
   type: vless
   server: forwarded.frnhk.xyz
   port: 2083
@@ -850,7 +1094,7 @@ proxies:
   reality-opts:
     public-key: zDMINFaRxcXKIpCvVD7UW7PJ5ZSYb_DQ3hkGobU07Ro
     short-id: 43ec82
-- name: 'youneed vless forwarded.frnhk.xyz:53002 #3'
+- name: '🇹🇼 youneed vless forwarded.frnhk.xyz:53002 #3'
   type: vless
   server: forwarded.frnhk.xyz
   port: 53002
@@ -863,7 +1107,7 @@ proxies:
   reality-opts:
     public-key: 3lswNoHV1RqK6yO--0ZWoYh1WqHkfhKQph3onxE_1So
     short-id: fc04
-- name: 'youneed vless forwarded.frnhk.xyz:2096 #3'
+- name: '🇹🇼 youneed vless forwarded.frnhk.xyz:2096 #3'
   type: vless
   server: forwarded.frnhk.xyz
   port: 2096
@@ -876,7 +1120,7 @@ proxies:
   reality-opts:
     public-key: GEEarJRHLYhymJBPxhQ1yuHq07RhTaC5Cjb6Jp2hKVw
     short-id: 67e4c41af23cc5
-- name: youneed vless 95.174.68.188:14430
+- name: 🇦🇪 youneed vless 95.174.68.188:14430
   type: vless
   server: 95.174.68.188
   port: 14430
@@ -888,7 +1132,7 @@ proxies:
     path: /vless
     headers:
       Host: 95.174.68.188
-- name: youneed vless uae.unixzone.us:22573
+- name: 🇦🇪 youneed vless uae.unixzone.us:22573
   type: vless
   server: uae.unixzone.us
   port: 22573
@@ -900,7 +1144,7 @@ proxies:
     path: /
     headers:
       Host: uae.unixzone.us
-- name: youneed vless 194.36.37.59:10004
+- name: 🇦🇲 youneed vless 194.36.37.59:10004
   type: vless
   server: 194.36.37.59
   port: 10004
@@ -909,7 +1153,7 @@ proxies:
   network: ws
   ws-opts:
     path: /vpnjantit
-- name: youneed vless 155.103.71.142:443
+- name: 🇹🇷 youneed vless 155.103.71.142:443
   type: vless
   server: 155.103.71.142
   port: 443
@@ -922,7 +1166,7 @@ proxies:
     path: /fp=chromefp=chrome
     headers:
       Host: ccc.010304.xyz
-- name: youneed vless 178.172.227.124:14430
+- name: 🇧🇾 youneed vless 178.172.227.124:14430
   type: vless
   server: 178.172.227.124
   port: 14430
@@ -933,7 +1177,7 @@ proxies:
     path: /vless
     headers:
       Host: 178.172.227.124
-- name: youneed vless 95.128.71.79:14430
+- name: 🇧🇾 youneed vless 95.128.71.79:14430
   type: vless
   server: 95.128.71.79
   port: 14430
@@ -944,13 +1188,13 @@ proxies:
     path: /vless
     headers:
       Host: 95.128.71.79
-- name: youneed vless milo.rubinaz.xyz:8080
+- name: 🇩🇪 youneed vless milo.rubinaz.xyz:8080
   type: vless
   server: milo.rubinaz.xyz
   port: 8080
   uuid: 6bceb548-d9b6-461f-8e37-a5a7fbcdc2c8
   encryption: none
-- name: youneed vless 43.174.193.1:443
+- name: 🇸🇬 youneed vless 43.174.193.1:443
   type: vless
   server: 43.174.193.1
   port: 443
@@ -963,7 +1207,7 @@ proxies:
     path: /fp=chrome
     headers:
       Host: ccc.010304.xyz
-- name: youneed vless 31.57.190.89:443
+- name: 🇲🇪 youneed vless 31.57.190.89:443
   type: vless
   server: 31.57.190.89
   port: 443
@@ -976,7 +1220,7 @@ proxies:
     path: /fp=chromefp=chrome
     headers:
       Host: ccc.010304.xyz
-- name: youneed vless 45.144.234.157:14430
+- name: 🇫🇮 youneed vless 45.144.234.157:14430
   type: vless
   server: 45.144.234.157
   port: 14430
@@ -988,7 +1232,7 @@ proxies:
     path: /vless
     headers:
       Host: 45.144.234.157
-- name: youneed vless 138.124.70.41:14430
+- name: 🇫🇷 youneed vless 138.124.70.41:14430
   type: vless
   server: 138.124.70.41
   port: 14430
@@ -1000,20 +1244,20 @@ proxies:
     path: /vless
     headers:
       Host: 138.124.70.41
-- name: youneed vless connect.hondamotor.site:10002
+- name: 🇫🇷 youneed vless connect.hondamotor.site:10002
   type: vless
   server: connect.hondamotor.site
   port: 10002
   uuid: c6362720-0931-4b91-b187-d8ecf3149734
   encryption: none
-- name: youneed vless node-uk.connectsuite.org:8443
+- name: 🇬🇧 youneed vless node-uk.connectsuite.org:8443
   type: vless
   server: node-uk.connectsuite.org
   port: 8443
   uuid: c08f0056-7a6d-4931-813b-aaa3cdd00aed
   encryption: none
   tls: true
-- name: youneed vless 195.58.144.56:11907
+- name: 🇭🇰 youneed vless 195.58.144.56:11907
   type: vless
   server: 195.58.144.56
   port: 11907
@@ -1023,7 +1267,7 @@ proxies:
   alpn:
   - h2
   - http/1.1
-- name: youneed vless 185.253.75.119:443
+- name: 🇮🇱 youneed vless 185.253.75.119:443
   type: vless
   server: 185.253.75.119
   port: 443
@@ -1036,14 +1280,14 @@ proxies:
     path: /fp=chrome
     headers:
       Host: ccc.010304.xyz
-- name: youneed vless 5.253.29.254:10443
+- name: 🇮🇳 youneed vless 5.253.29.254:10443
   type: vless
   server: 5.253.29.254
   port: 10443
   uuid: c7c27192-60a5-4ce1-b613-95270d82309d
   encryption: none
   servername: 5.253.29.254
-- name: youneed vless 13.140.56.100:14430
+- name: 🇮🇳 youneed vless 13.140.56.100:14430
   type: vless
   server: 13.140.56.100
   port: 14430
@@ -1055,7 +1299,7 @@ proxies:
     path: /vless
     headers:
       Host: 13.140.56.100
-- name: youneed vless 204.216.216.23:10086
+- name: 🇮🇹 youneed vless 204.216.216.23:10086
   type: vless
   server: 204.216.216.23
   port: 10086
@@ -1074,13 +1318,13 @@ proxies:
     path: /fp=chrome
     headers:
       Host: ccc.010304.xyz
-- name: youneed vless 137.220.221.179:443
+- name: 🇯🇵 youneed vless 137.220.221.179:443
   type: vless
   server: 137.220.221.179
   port: 443
   uuid: a16a3336-c9ab-489f-9b85-c973f5e2cfa4
   encryption: none
-- name: youneed vless 216.173.67.59:443
+- name: 🇲🇾 youneed vless 216.173.67.59:443
   type: vless
   server: 216.173.67.59
   port: 443
@@ -1093,19 +1337,19 @@ proxies:
     path: /fp=chrome
     headers:
       Host: ccc.010304.xyz
-- name: youneed vless 94.237.46.104:443
+- name: 🇳🇱 youneed vless 94.237.46.104:443
   type: vless
   server: 94.237.46.104
   port: 443
   uuid: dac47070-c136-49f3-8ed2-32b68e710ea3
   encryption: none
-- name: youneed vless edge10.cyrionflare.com:2052
+- name: 🇵🇱 youneed vless edge10.cyrionflare.com:2052
   type: vless
   server: edge10.cyrionflare.com
   port: 2052
   uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
   encryption: none
-- name: youneed vless 5.178.109.174:14430
+- name: 🇸🇪 youneed vless 5.178.109.174:14430
   type: vless
   server: 5.178.109.174
   port: 14430
@@ -1116,7 +1360,7 @@ proxies:
     path: /vless
     headers:
       Host: 5.178.109.174
-- name: 'youneed vless 216.173.67.59:443 #2'
+- name: '🇲🇾 youneed vless 216.173.67.59:443 #2'
   type: vless
   server: 216.173.67.59
   port: 443
@@ -1140,7 +1384,7 @@ proxies:
     path: /sg-melbi
     headers:
       Host: hhlfy.twiladaphne.ndjp.net
-- name: youneed vless 150.95.109.109:2086
+- name: 🇻🇳 youneed vless 150.95.109.109:2086
   type: vless
   server: 150.95.109.109
   port: 2086
@@ -1172,7 +1416,7 @@ proxies:
     path: /?auto=1&ed=2560
     headers:
       Host: g5nt.jao.hhll.vavava.kdns.fr
-- name: 'youneed vless 13.140.56.100:14430 #2'
+- name: '🇮🇳 youneed vless 13.140.56.100:14430 #2'
   type: vless
   server: 13.140.56.100
   port: 14430
@@ -1218,7 +1462,7 @@ proxies:
     path: /
     headers:
       Host: hhlfy.twiladaphne.ndjp.net
-- name: 'youneed vless 31.57.190.89:443 #2'
+- name: '🇲🇪 youneed vless 31.57.190.89:443 #2'
   type: vless
   server: 31.57.190.89
   port: 443
@@ -1230,7 +1474,7 @@ proxies:
     path: /fp=chromefp=chromesecurity=tls
     headers:
       Host: ccc.010304.xyz
-- name: youneed vless 159.65.51.189:443
+- name: 🇬🇧 youneed vless 159.65.51.189:443
   type: vless
   server: 159.65.51.189
   port: 443
@@ -1279,7 +1523,7 @@ proxies:
     path: /fp
     headers:
       Host: hhlfy.twiladaphne.ndjp.net
-- name: youneed vless 5.252.179.15:443
+- name: 🇩🇪 youneed vless 5.252.179.15:443
   type: vless
   server: 5.252.179.15
   port: 443
@@ -1292,7 +1536,7 @@ proxies:
   reality-opts:
     public-key: XQB2zIgrhD8AtxgYFM8UiiWYt1sLVBLhMg1M4-sGMAY
     short-id: 296f27de82dad7ff
-- name: youneed vless 194.61.31.126:2053
+- name: 🇮🇳 youneed vless 194.61.31.126:2053
   type: vless
   server: 194.61.31.126
   port: 2053
@@ -1304,7 +1548,7 @@ proxies:
   reality-opts:
     public-key: PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU
     short-id: 9980e0609b0d3891
-- name: youneed vless 78.135.73.47:443
+- name: 🇹🇷 youneed vless 78.135.73.47:443
   type: vless
   server: 78.135.73.47
   port: 443
@@ -1317,7 +1561,7 @@ proxies:
   reality-opts:
     public-key: sZAJkAu23wp1WKY-qeaeiwR38izP5OyfhumoE9xhbB8
     short-id: f46cd3ea3d1eb72d
-- name: youneed vless free-amsterdam-node-1.cloudwidecdn.com:443
+- name: 🇳🇱 youneed vless free-amsterdam-node-1.cloudwidecdn.com:443
   type: vless
   server: free-amsterdam-node-1.cloudwidecdn.com
   port: 443
@@ -1330,7 +1574,7 @@ proxies:
   reality-opts:
     public-key: PryGoq51ilG0eLUPl9i0xCvmk1xpwkyFSr_tG4GNLlU
     short-id: 1d86d17709852910
-- name: youneed vless 15.204.97.216:23576
+- name: 🇺🇸 youneed vless 15.204.97.216:23576
   type: vless
   server: 15.204.97.216
   port: 23576
@@ -1343,7 +1587,7 @@ proxies:
   reality-opts:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '01'
-- name: youneed vless 15.204.97.219:23576
+- name: 🇺🇸 youneed vless 15.204.97.219:23576
   type: vless
   server: 15.204.97.219
   port: 23576
@@ -1356,7 +1600,7 @@ proxies:
   reality-opts:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '01'
-- name: youneed vless 51.158.206.12:23576
+- name: 🇳🇱 youneed vless 51.158.206.12:23576
   type: vless
   server: 51.158.206.12
   port: 23576
@@ -1369,7 +1613,7 @@ proxies:
   reality-opts:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '01'
-- name: youneed vless 51.158.206.20:23576
+- name: 🇳🇱 youneed vless 51.158.206.20:23576
   type: vless
   server: 51.158.206.20
   port: 23576
@@ -1382,7 +1626,7 @@ proxies:
   reality-opts:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '01'
-- name: youneed vless 51.158.206.80:23576
+- name: 🇳🇱 youneed vless 51.158.206.80:23576
   type: vless
   server: 51.158.206.80
   port: 23576
@@ -1395,7 +1639,7 @@ proxies:
   reality-opts:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '01'
-- name: youneed vless 54.169.200.246:41688
+- name: 🇸🇬 youneed vless 54.169.200.246:41688
   type: vless
   server: 54.169.200.246
   port: 41688
@@ -1408,7 +1652,7 @@ proxies:
   reality-opts:
     public-key: srwIElIGTPs0kshpN1vvPsn4wixV_pLd56y_v9m0sTk
     short-id: 7f342137c20387
-- name: youneed vless 83.147.18.75:443
+- name: 🇬🇧 youneed vless 83.147.18.75:443
   type: vless
   server: 83.147.18.75
   port: 443
@@ -1421,7 +1665,7 @@ proxies:
   reality-opts:
     public-key: tfFzmbVByvoZxxIEUiHMv22_k0-nQz00L0XjU0bd_Fc
     short-id: 7f1e29593aa94ad1
-- name: youneed vless 87.239.249.137:443
+- name: 🇫🇮 youneed vless 87.239.249.137:443
   type: vless
   server: 87.239.249.137
   port: 443
@@ -1434,7 +1678,7 @@ proxies:
   reality-opts:
     public-key: G7bpUPFSW28-oE6ff8qZac1_apU6PiJ-GHmi7tAPDSY
     short-id: 91af08b1ce1f
-- name: youneed vless 139.162.27.96:2096
+- name: 🇸🇬 youneed vless 139.162.27.96:2096
   type: vless
   server: 139.162.27.96
   port: 2096
@@ -1447,7 +1691,7 @@ proxies:
     path: /free-server.techsonic.dev
     headers:
       Host: free-server.techsonic.dev
-- name: youneed vless 152.228.139.33:51671
+- name: 🇫🇷 youneed vless 152.228.139.33:51671
   type: vless
   server: 152.228.139.33
   port: 51671
@@ -1462,7 +1706,7 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: grpc_common3
-- name: youneed vless 51.81.203.63:443
+- name: 🇺🇸 youneed vless 51.81.203.63:443
   type: vless
   server: 51.81.203.63
   port: 443
@@ -1501,7 +1745,7 @@ proxies:
     path: /fp=chrome
     headers:
       Host: ccc.010304.xyz
-- name: youneed vless 169.40.42.104:443
+- name: 🇺🇸 youneed vless 169.40.42.104:443
   type: vless
   server: 169.40.42.104
   port: 443
@@ -1514,7 +1758,7 @@ proxies:
   reality-opts:
     public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
     short-id: c39cc7310a
-- name: youneed vless 169.40.42.168:443
+- name: 🇺🇸 youneed vless 169.40.42.168:443
   type: vless
   server: 169.40.42.168
   port: 443
@@ -1527,7 +1771,7 @@ proxies:
   reality-opts:
     public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
     short-id: c39cc7310a
-- name: youneed vless 169.40.42.235:443
+- name: 🇺🇸 youneed vless 169.40.42.235:443
   type: vless
   server: 169.40.42.235
   port: 443
@@ -1540,7 +1784,7 @@ proxies:
   reality-opts:
     public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
     short-id: c39cc7310a
-- name: youneed vless 169.40.42.35:443
+- name: 🇺🇸 youneed vless 169.40.42.35:443
   type: vless
   server: 169.40.42.35
   port: 443
@@ -1565,7 +1809,7 @@ proxies:
     path: /fp
     headers:
       Host: hhlfy.twiladaphne.ndjp.net
-- name: youneed vless 54.37.136.194:2053
+- name: 🇵🇱 youneed vless 54.37.136.194:2053
   type: vless
   server: 54.37.136.194
   port: 2053
@@ -1664,7 +1908,7 @@ proxies:
     path: /fpfp=chrome
     headers:
       Host: hhlfy.twiladaphne.ndjp.net
-- name: youneed vless 3.39.4.109:13672
+- name: 🇰🇷 youneed vless 3.39.4.109:13672
   type: vless
   server: 3.39.4.109
   port: 13672
@@ -1677,7 +1921,7 @@ proxies:
   reality-opts:
     public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
     short-id: 48050fab
-- name: youneed trojan 185.255.179.166:443
+- name: 🇩🇪 youneed trojan 185.255.179.166:443
   type: trojan
   server: 185.255.179.166
   port: 443
@@ -1688,7 +1932,7 @@ proxies:
     path: /assignment
     headers:
       Host: www.calmlunch.com
-- name: youneed trojan 185.225.68.232:443
+- name: 🇭🇺 youneed trojan 185.225.68.232:443
   type: trojan
   server: 185.225.68.232
   port: 443
@@ -1699,7 +1943,7 @@ proxies:
     path: /assignment
     headers:
       Host: www.calmlunch.com
-- name: youneed trojan 45.87.41.18:443
+- name: 🇳🇱 youneed trojan 45.87.41.18:443
   type: trojan
   server: 45.87.41.18
   port: 443
@@ -1710,7 +1954,7 @@ proxies:
     path: /assignment
     headers:
       Host: www.calmlunch.com
-- name: youneed trojan 185.114.72.31:2053
+- name: 🇪🇸 youneed trojan 185.114.72.31:2053
   type: trojan
   server: 185.114.72.31
   port: 2053
@@ -1721,7 +1965,7 @@ proxies:
     path: /assignment
     headers:
       Host: www.calmlunch.com
-- name: youneed trojan 45.130.125.160:443
+- name: 🇸🇨 youneed trojan 45.130.125.160:443
   type: trojan
   server: 45.130.125.160
   port: 443
@@ -1732,7 +1976,7 @@ proxies:
     path: /assignment
     headers:
       Host: www.calmlunch.com
-- name: youneed trojan 185.220.100.168:443
+- name: 🇩🇪 youneed trojan 185.220.100.168:443
   type: trojan
   server: 185.220.100.168
   port: 443
@@ -1754,7 +1998,7 @@ proxies:
     path: /assignment
     headers:
       Host: www.calmlunch.com
-- name: youneed trojan 165.215.250.14:443
+- name: 🇺🇸 youneed trojan 165.215.250.14:443
   type: trojan
   server: 165.215.250.14
   port: 443
@@ -1779,7 +2023,7 @@ proxies:
     path: /assignment
     headers:
       Host: www.trusteeforward.com
-- name: youneed trojan 161.35.192.122:443
+- name: 🇩🇪 youneed trojan 161.35.192.122:443
   type: trojan
   server: 161.35.192.122
   port: 443
@@ -1792,7 +2036,7 @@ proxies:
     path: /assignment
     headers:
       Host: www.pleadcourt.org
-- name: youneed trojan 31.57.190.71:443
+- name: 🇲🇪 youneed trojan 31.57.190.71:443
   type: trojan
   server: 31.57.190.71
   port: 443
@@ -1805,124 +2049,124 @@ proxies:
     path: /assignment
     headers:
       Host: www.pleadcourt.org
-- name: youneed trojan tjxg.m2k699.com:24999
+- name: 🇭🇰 youneed trojan tjxg.m2k699.com:24999
   type: trojan
   server: tjxg.m2k699.com
   port: 24999
   password: 29086912-33e4-4e06-ba2b-60f1a195864f
   sni: www.itunes.com
   skip-cert-verify: true
-- name: youneed trojan tjrb.m2k699.com:24999
+- name: 🇯🇵 youneed trojan tjrb.m2k699.com:24999
   type: trojan
   server: tjrb.m2k699.com
   port: 24999
   password: 29086912-33e4-4e06-ba2b-60f1a195864f
   sni: www.itunes.com
   skip-cert-verify: true
-- name: youneed trojan tjtw.m2k699.com:24999
+- name: 🇹🇼 youneed trojan tjtw.m2k699.com:24999
   type: trojan
   server: tjtw.m2k699.com
   port: 24999
   password: 29086912-33e4-4e06-ba2b-60f1a195864f
   sni: www.itunes.com
   skip-cert-verify: true
-- name: youneed trojan tjyn.m2k699.com:24999
+- name: 🇭🇰 youneed trojan tjyn.m2k699.com:24999
   type: trojan
   server: tjyn.m2k699.com
   port: 24999
   password: 29086912-33e4-4e06-ba2b-60f1a195864f
   sni: www.itunes.com
   skip-cert-verify: true
-- name: youneed trojan tjhg.m2k699.com:24999
+- name: 🇰🇷 youneed trojan tjhg.m2k699.com:24999
   type: trojan
   server: tjhg.m2k699.com
   port: 24999
   password: 29086912-33e4-4e06-ba2b-60f1a195864f
   sni: www.itunes.com
   skip-cert-verify: true
-- name: youneed trojan tjxjp.m2k699.com:24999
+- name: 🇸🇬 youneed trojan tjxjp.m2k699.com:24999
   type: trojan
   server: tjxjp.m2k699.com
   port: 24999
   password: 29086912-33e4-4e06-ba2b-60f1a195864f
   sni: www.itunes.com
   skip-cert-verify: true
-- name: youneed trojan tjflb.m2k699.com:24999
+- name: 🇭🇰 youneed trojan tjflb.m2k699.com:24999
   type: trojan
   server: tjflb.m2k699.com
   port: 24999
   password: 29086912-33e4-4e06-ba2b-60f1a195864f
   sni: www.itunes.com
   skip-cert-verify: true
-- name: youneed trojan tjadly.m2k699.com:24999
+- name: 🇭🇰 youneed trojan tjadly.m2k699.com:24999
   type: trojan
   server: tjadly.m2k699.com
   port: 24999
   password: 29086912-33e4-4e06-ba2b-60f1a195864f
   sni: www.itunes.com
   skip-cert-verify: true
-- name: youneed trojan tjterq.m2k699.com:24999
+- name: 🇭🇰 youneed trojan tjterq.m2k699.com:24999
   type: trojan
   server: tjterq.m2k699.com
   port: 24999
   password: 29086912-33e4-4e06-ba2b-60f1a195864f
   sni: www.itunes.com
   skip-cert-verify: true
-- name: youneed trojan tjjnd.m2k699.com:24999
+- name: 🇭🇰 youneed trojan tjjnd.m2k699.com:24999
   type: trojan
   server: tjjnd.m2k699.com
   port: 24999
   password: 29086912-33e4-4e06-ba2b-60f1a195864f
   sni: www.itunes.com
   skip-cert-verify: true
-- name: youneed trojan tjyg.m2k699.com:24999
+- name: 🇭🇰 youneed trojan tjyg.m2k699.com:24999
   type: trojan
   server: tjyg.m2k699.com
   port: 24999
   password: 29086912-33e4-4e06-ba2b-60f1a195864f
   sni: www.itunes.com
   skip-cert-verify: true
-- name: youneed trojan tjmg1.m2k699.com:24999
+- name: 🇺🇸 youneed trojan tjmg1.m2k699.com:24999
   type: trojan
   server: tjmg1.m2k699.com
   port: 24999
   password: 29086912-33e4-4e06-ba2b-60f1a195864f
   sni: www.itunes.com
   skip-cert-verify: true
-- name: youneed trojan tjmg2.m2k699.com:24999
+- name: 🇺🇸 youneed trojan tjmg2.m2k699.com:24999
   type: trojan
   server: tjmg2.m2k699.com
   port: 24999
   password: 29086912-33e4-4e06-ba2b-60f1a195864f
   sni: www.itunes.com
   skip-cert-verify: true
-- name: youneed trojan tjmlxy.m2k699.com:24999
+- name: 🇭🇰 youneed trojan tjmlxy.m2k699.com:24999
   type: trojan
   server: tjmlxy.m2k699.com
   port: 24999
   password: 29086912-33e4-4e06-ba2b-60f1a195864f
   sni: www.itunes.com
   skip-cert-verify: true
-- name: youneed trojan 2.27.109.179:45464
+- name: 🇭🇰 youneed trojan 2.27.109.179:45464
   type: trojan
   server: 2.27.109.179
   port: 45464
   password: XuMweB2PWs
   sni: 2.27.109.179.sslip.io
-- name: youneed trojan 66.23.203.21:59689
+- name: 🇺🇸 youneed trojan 66.23.203.21:59689
   type: trojan
   server: 66.23.203.21
   port: 59689
   password: ae7eb4dwyaz25pxwgq59
   skip-cert-verify: true
-- name: youneed hysteria2 198.46.146.118:36720
+- name: 🇺🇸 youneed hysteria2 198.46.146.118:36720
   type: hysteria2
   server: 198.46.146.118
   port: 36720
   password: 4fUg3KH31LpMhko6o0Ka9Q
   sni: bing.com
   skip-cert-verify: true
-- name: youneed hysteria2 155.117.19.17:443
+- name: 🇺🇸 youneed hysteria2 155.117.19.17:443
   type: hysteria2
   server: 155.117.19.17
   port: 443
@@ -1931,27 +2175,27 @@ proxies:
   skip-cert-verify: true
   obfs: salamander
   obfs-password: a39ca173b57ac7021b08bf3e3de9f1f6
-- name: youneed hysteria2 103.115.109.49:443
+- name: 🇹🇼 youneed hysteria2 103.115.109.49:443
   type: hysteria2
   server: 103.115.109.49
   port: 443
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   skip-cert-verify: true
-- name: youneed hysteria2 160.187.100.109:443
+- name: 🇹🇼 youneed hysteria2 160.187.100.109:443
   type: hysteria2
   server: 160.187.100.109
   port: 443
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   sni: vpn-tw-002.fastervpn.world
   skip-cert-verify: true
-- name: youneed hysteria2 vpn-tw-002.fastervpn.world:443
+- name: 🇹🇼 youneed hysteria2 vpn-tw-002.fastervpn.world:443
   type: hysteria2
   server: vpn-tw-002.fastervpn.world
   port: 443
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   sni: 127.0.0.1
   skip-cert-verify: true
-- name: youneed hysteria2 162.249.125.133:443
+- name: 🇩🇪 youneed hysteria2 162.249.125.133:443
   type: hysteria2
   server: 162.249.125.133
   port: 443
@@ -1959,7 +2203,7 @@ proxies:
   sni: hy2-new.aspidnet.xyz
   obfs: salamander
   obfs-password: c1b4086fea89914496c7e10967a419216566
-- name: youneed hysteria2 179.61.138.145:36264
+- name: 🇩🇪 youneed hysteria2 179.61.138.145:36264
   type: hysteria2
   server: 179.61.138.145
   port: 36264
@@ -1968,13 +2212,13 @@ proxies:
   skip-cert-verify: true
   obfs: salamander
   obfs-password: Telegram@vpnjey
-- name: youneed hysteria2 hy2.123266.xyz:33333
+- name: 🇺🇸 youneed hysteria2 hy2.123266.xyz:33333
   type: hysteria2
   server: hy2.123266.xyz
   port: 33333
   password: bce6c821-200d-421f-bf3d-7159e5246ea0
   sni: hy2.123266.xyz
-- name: youneed hysteria2 130.49.161.70:443
+- name: 🇳🇱 youneed hysteria2 130.49.161.70:443
   type: hysteria2
   server: 130.49.161.70
   port: 443
@@ -1982,28 +2226,28 @@ proxies:
   sni: hy2.aspidnet.xyz
   obfs: salamander
   obfs-password: rG07s3COMIEvdnQipRyWzx_H_2xygNC3
-- name: youneed hysteria2 twtwtw.459292.xyz:30001
+- name: 🇹🇼 youneed hysteria2 twtwtw.459292.xyz:30001
   type: hysteria2
   server: twtwtw.459292.xyz
   port: 30001
   password: 65c71bac-64fb-470d-950e-de193a509811
   sni: localhost
   skip-cert-verify: true
-- name: youneed hysteria2 163.192.14.135:50160
+- name: 🇺🇸 youneed hysteria2 163.192.14.135:50160
   type: hysteria2
   server: 163.192.14.135
   port: 50160
   password: 099830134df5ac3a04a4b21d39b8c395
   sni: vk.com
   skip-cert-verify: true
-- name: youneed hysteria2 129.213.91.185:35013
+- name: 🇺🇸 youneed hysteria2 129.213.91.185:35013
   type: hysteria2
   server: 129.213.91.185
   port: 35013
   password: 4291c983-c520-46ac-82cc-48f14bef573f
   sni: 129.213.91.185
   skip-cert-verify: true
-- name: youneed hysteria2 hy2.aspidnet.xyz:443
+- name: 🇳🇱 youneed hysteria2 hy2.aspidnet.xyz:443
   type: hysteria2
   server: hy2.aspidnet.xyz
   port: 443
@@ -2011,13 +2255,13 @@ proxies:
   sni: hy2.aspidnet.xyz
   obfs: salamander
   obfs-password: rG07s3COMIEvdnQipRyWzx_H_2xygNC3
-- name: youneed hysteria2 nl-hy-test.tcp-reset-club.net:443
+- name: 🇳🇱 youneed hysteria2 nl-hy-test.tcp-reset-club.net:443
   type: hysteria2
   server: nl-hy-test.tcp-reset-club.net
   port: 443
   password: 529f1911-04d5-4427-94b9-c851fd459a27
   sni: tcp-reset-club.net
-- name: youneed hysteria2 152.67.75.161:443
+- name: 🇨🇭 youneed hysteria2 152.67.75.161:443
   type: hysteria2
   server: 152.67.75.161
   port: 443
@@ -2026,19 +2270,19 @@ proxies:
   skip-cert-verify: true
   obfs: salamander
   obfs-password: c13f29db6a638ad2b211b9ce2669ef27
-- name: youneed ss 202.50.253.54:19999
+- name: 🇮🇹 youneed ss 202.50.253.54:19999
   type: ss
   server: 202.50.253.54
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: youneed ss 191.223.221.53:8388
+- name: 🇯🇵 youneed ss 191.223.221.53:8388
   type: ss
   server: 191.223.221.53
   port: 8388
   cipher: aes-256-gcm
   password: JuD6MNgtX3nVpCzFzXYVYjDTZ7nsmaTv
-- name: youneed vless hk1.frnhk.xyz:443
+- name: 🇭🇰 youneed vless hk1.frnhk.xyz:443
   type: vless
   server: hk1.frnhk.xyz
   port: 443
@@ -2051,7 +2295,7 @@ proxies:
   reality-opts:
     public-key: gXOQOlynAB6Znbp902LRyX7eYSxTWrj7D2nRCB1gNmE
     short-id: 6b7a8c9d
-- name: youneed vless 77.110.97.245:443
+- name: 🇸🇪 youneed vless 77.110.97.245:443
   type: vless
   server: 77.110.97.245
   port: 443
@@ -2064,7 +2308,7 @@ proxies:
     path: /fp=chromefp=chrome
     headers:
       Host: ccc.010304.xyz
-- name: youneed vless xsru1.ddnsfree.com:443
+- name: 🇷🇺 youneed vless xsru1.ddnsfree.com:443
   type: vless
   server: xsru1.ddnsfree.com
   port: 443
@@ -2101,3 +2345,48 @@ proxies:
     path: /?auto=1&ed=2560
     headers:
       Host: 1ayz.egs.hhll.vavava.kdns.fr
+- name: 🇳🇱 youneed vless 213.152.165.201:2094
+  type: vless
+  server: 213.152.165.201
+  port: 2094
+  uuid: 2ddcb519-ac96-48fe-8f91-4af4254c7d90
+  encryption: none
+  tls: true
+  flow: xtls-rprx-vision
+  servername: www.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: jHtC6ayzhkd_GVNF5TIGPu9iVpqUltBAQj1dpGJHwxs
+    short-id: 55986a94e2228791
+- name: 🇺🇸 youneed vless jdy7.ea7.lol:21899
+  type: vless
+  server: jdy7.ea7.lol
+  port: 21899
+  uuid: fb69a6b9-980c-48c2-a94f-5f95868a2d2a
+  encryption: none
+  tls: true
+  flow: xtls-rprx-vision
+  servername: yahoo.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: kvLUYW6fwHXutu8Z4On6mi61kjslCyCc8ErFffUM1D0
+    short-id: dedce016e3671418
+- name: 🇳🇱 youneed vless 213.152.165.203:2093
+  type: vless
+  server: 213.152.165.203
+  port: 2093
+  uuid: 0b418782-e023-447e-ba99-e66b84ff118d
+  encryption: none
+  tls: true
+  flow: xtls-rprx-vision
+  servername: www.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: C_GA8wVjeLmyqLK6em5OHn4WPlsbndA-RyvyNU1aGFM
+    short-id: 8a9725533854a7e8
+- name: 🇺🇸 youneed trojan www.777061.xyz:18603
+  type: trojan
+  server: www.777061.xyz
+  port: 18603
+  password: lk59gDrTm2
+  sni: www.777061.xyz
